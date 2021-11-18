@@ -1,0 +1,28 @@
+const firebaseConfig = {
+      apiKey: "AIzaSyBfKU5Z3zn3_lYJA9E-EqJJ1mcgltG4mTI",
+      authDomain: "kwitter-f47f4.firebaseapp.com",
+      projectId: "kwitter-f47f4",
+      storageBucket: "kwitter-f47f4.appspot.com",
+      messagingSenderId: "684541167323",
+      appId: "1:684541167323:web:9ca92ac784fc66478eaefe",
+      measurementId: "G-5GTCN36352"
+    };
+    
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
+       Room_names = childKey;
+function getData() {firebase.database().ref("/").on('value',
+function(snapshot) {document.getElementById("output").innerHTML =
+"";snapshot.forEach(function(childSnapshot) {childKey = childSnapshot.key;
+Room_names = childKey;
+//Start code
+row ="<div class="roon_name" id="+Roon_name" onclick="redirectToRoomName(.id)'>#" +Roon_names+"</div><hr>";
+
+//End code
+});});}
+function logout() {
+localStorage.removeItem("user_name");
+localStorage.removeItem("room_name");
+window.location.replace("kwitter.html")
